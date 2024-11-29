@@ -1,0 +1,9 @@
+This is to show how to compile a shared object.
+
+gcc -shared -fpic -o libf.so f1.c f2.c
+
+gcc main.c ./libf.so
+
+After above two bash command, a default file a.out is created.
+
+With shared object libf.so, even the function is updated and re-compiled libf.so, there is no need to link main.c and libf.so.
